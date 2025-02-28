@@ -1,0 +1,55 @@
+BACKUP ~ArcaneArchetypes/backup~
+SUPPORT ~Glittergear~
+
+VERSION ~v0~
+
+ALWAYS
+  INCLUDE ~%MOD_FOLDER%/lib/a7#add_kit_ex.tpa~
+  INCLUDE ~%MOD_FOLDER%/lib/fl#add_kit_ee.tpa~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
+END
+
+BEGIN ~Arcane Archetypes~
+
+//ABERRANTMIND
+INCLUDE ~%MOD_FOLDER%/AberrantMind/kit-AberrantMind.tph~
+COMPILE ~%MOD_FOLDER%/AberrantMind/dialogues/d_gaaAB.d~
+COMPILE ~%MOD_FOLDER%/AberrantMind/script/gaaABcs.bcs~ ~override/gaaABcs.bcs~ 
+COPY ~%MOD_FOLDER%/AberrantMind/creatures/gaaABc.cre~ ~override/gaaABc.cre~
+COPY ~%MOD_FOLDER%/AberrantMind/script/gaaABcs.bcs~ ~override/gaaABcs.bcs~ 
+
+//FATESPINNER
+INCLUDE ~%MOD_FOLDER%/Fatespinner/kit-Fatespinner.tph~
+COMPILE ~%MOD_FOLDER%/Fatespinner/dialogues/d_gaaFS.d~
+COMPILE ~%MOD_FOLDER%/Fatespinner/script/gaaFScs.bcs~ ~override/gaaFScs.bcs~ 
+COPY ~%MOD_FOLDER%/Fatespinner/creatures/gaaFSc.cre~ ~override/gaaFSc.cre~
+COPY ~%MOD_FOLDER%/Fatespinner/script/gaaFScs.bcs~ ~override/gaaFScs.bcs~ 
+
+
+//FELLTOUCHED
+INCLUDE ~%MOD_FOLDER%/FellTouched/kit-FellTouched.tph~
+COMPILE ~%MOD_FOLDER%/FellTouched/dialogues/d_gaaFT.d~
+COMPILE ~%MOD_FOLDER%/FellTouched/script/gaaFTcs.bcs~ ~override/gaaFTcs.bcs~ 
+COPY ~%MOD_FOLDER%/FellTouched/creatures/gaaFTc.cre~ ~override/gaaFTc.cre~
+COPY ~%MOD_FOLDER%/FellTouched/script/gaaFTcs.bcs~ ~override/gaaFTcs.bcs~ 
+
+//FEYTOUCHED
+INCLUDE ~%MOD_FOLDER%/FeyTouched/kit-FeyTouched.tph~
+COMPILE ~%MOD_FOLDER%/FeyTouched/dialogues/d_gaaYT.d~
+COMPILE ~%MOD_FOLDER%/FeyTouched/script/gaaYTcs.bcs~ ~override/gaaYTcs.bcs~ 
+COPY ~%MOD_FOLDER%/FeyTouched/creatures/gaaYTc.cre~ ~override/gaaYTc.cre~
+COPY ~%MOD_FOLDER%/FeyTouched/script/gaaYTcs.bcs~ ~override/gaaYTcs.bcs~ 
+
+//SOLARADEPT
+INCLUDE ~%MOD_FOLDER%/SolarAdept/kit-SolarAdept.tph~
+COMPILE ~%MOD_FOLDER%/SolarAdept/dialogues/d_gaaSD.d~
+COMPILE ~%MOD_FOLDER%/SolarAdept/script/gaaSDcs.bcs~ ~override/gaaSDcs.bcs~ 
+COPY ~%MOD_FOLDER%/SolarAdept/script/gaaSDcs.bcs~ ~override/gaaSDcs.bcs~ 
+COPY ~%MOD_FOLDER%/SolarAdept/creatures/gaaSDc.cre~ ~override/gaaSDc.cre~
+
+//WILLBINDER
+INCLUDE ~%MOD_FOLDER%/Willbinder/kit-Willbinder.tph~
+COMPILE ~%MOD_FOLDER%/Willbinder/dialogues/d_gaaWB.d~
+COMPILE ~%MOD_FOLDER%/Willbinder/script/gaaWBcs.bcs~ ~override/gaaWBcs.bcs~ 
+COPY ~%MOD_FOLDER%/Willbinder/script/gaaWBcs.bcs~ ~override/gaaWBcs.bcs~ 
+COPY ~%MOD_FOLDER%/Willbinder/creatures/gaaWBc.cre~ ~override/gaaWBc.cre~

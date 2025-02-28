@@ -1,0 +1,86 @@
+COPY ~%MOD_FOLDER%/AberrantMind/2da~      ~override~
+COPY ~%MOD_FOLDER%/AberrantMind/spells~      ~override~
+
+////////////////////////////////////////////
+ADD_KIT ~g_aaABcl~
+
+ // appended to CLASWEAP.2da
+ ~g_aaABcl		1           1           1           1           1           1           1           1~
+
+ // appended column-wise to WEAPPROF.2da
+//11                                T   S           F   Q             S S
+//10                                W   C           L   U             W I
+//9                         B L S   O   I   W       A   A             O N
+//8                         A O H   H   M   A       I   R C   S       R G
+//7         L S           M S N O   A   I   R     H L   T R L H     2 D L 2                 E E E E E E E E E E E
+//6         _ _       S   I T G R   N K T D H     A M   E O O O     H A E W E E E E E E E E X X X X X X X X X X X
+//5         S S   S B P   S A S T   D A A A A   S L O   R S N R   S A N W E X X X X X X X X T T T T T T T T T T T
+//4         W W   P L I   S R W S   E T R G M C P B R M S S G T D L N D E A T T T T T T T T R R R R R R R R R R R
+//3         O O B E U K A I D O W A D A W G M L E E N A T B B B A I D S A P R R R R R R R R A A A A A A A A A A A
+//2         R R O A N E X L S R O X S N A E E U A R I C A O O O R N E H P O A A A A A A A A 1 1 1 1 1 1 1 1 1 1 2
+//1         D D W R T D E E W D R E W A K R R B R D N E F W W W T G D I O N 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0
+ ~g_aaABcl  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+    
+ // appended to ABCLASRQ.2da (minimal stats for that kit)
+ //             S D C I w CR
+ ~g_aaABcl      0 0 0 0 14 0~
+
+ // appended to ABCLSMOD.2da (stat modifiers)
+ //             S D C I w CR
+ ~g_aaABcl      0 0 0 0 0 -2~
+
+ // appended to ABDCDSRQ.2da (requirements to dual-class into this kit)
+ //             S D  C I w CR
+ ~g_aaABcl      0 15 0 0 14 0~
+
+ // appended to ABDCSCRQ.2da (requirements for this kit to dual class)
+ //             S D  C I w CR
+ ~g_aaABcl      0 15 0 0 14 0~
+
+ // appended to ALIGNMNT.2da 
+ //             L_G  L_N  L_E  N_G  N_N  N_E  C_G  C_N  C_E
+ ~g_aaABcl       1    1    1    1    1    1    1    1    1~
+
+ // appended to DUALCLAS.2da
+ //             FIG     CLE     MAG     THI     DRU     RAN
+ ~g_aaABcl       0       0       0       0       0       0~
+
+ // path to your CLAB-style 2da file 
+ ~%MOD_FOLDER%/AberrantMind/2da/g_aaABcl.2da~
+
+ // PC races and classes allowed to use this kit, from KITTABLE.2da
+ ~K_S_H    K_S_D   K_S_G   K_S_E   K_S_HE   K_S_HL   K_S_HO~
+
+ // usability flags, added to the end of the KITLIST.2da entry
+ ~0x00004000     19~
+
+ // HLA table to use; see LUABBR.2da
+ ~So0~ 
+
+ // list of starting equipment for PCs starting in ToB. Appended column-wise to 25STWEAP.2da
+ ~LEAT07 * HELM18 BAG20 RING06 RING02 * BOOT01 AMUL18 BRAC09 BELT06 bull04,20 * * POTN52,5 POTN4,2 POTN14,5 BLUN36 slng02 STAF07~
+ 
+ // Lower, mixed, and help kit names and descriptions, added to KITLIST.2da
+  SAY ~aberrant mind~ //all lowercase
+  SAY ~Aberrant Mind~ //mixed case
+  SAY ~ABERRANT MIND: The secrets of reality itself seem to readily reveal itself to aberrant mind sorcerers, who have an uncanny way of noticing and knowing things--magical and  mundane alike. Unfortunately, they tend to have a slightly unsettling presence to others. Perhaps these sorcerers are touched by an entity of the Far Realms or some psionic creature, or perhaps the magic comes from somewhere else altogether.
+
+Advantages: 
+– Learn the following spells: Find Traps, Farsight, Chaotic Commands, True Sight
+- Immune to Confusion
+
+Disadvantages: 
+– Has one fewer spellslot per level
+- Has -2 Charisma ~
+
+LAF fl#add_kit_ee
+  STR_VAR
+		kit_name = g_aaABcl
+END
+
+
+///////////////////////////////////////////////
+/////////////// GAINED ABILITIES //////////////
+///////////////////////////////////////////////
+
+//COPY ~%MOD_FOLDER%/fatespinner/spells/gaaFS00.spl~ ~override~
